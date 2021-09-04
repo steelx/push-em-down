@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc49e50884dad8348b44e7b39a93d3f9, type: 3}
+  m_Name: MovementData
+  m_EditorClassIdentifier: 
+  MaxSpeed: 2
+  Acceleration: 10
+  Deacceleration: 40
+  JumpForce: 3
+  MouseSensiX: 3
+  MouseSensiY: 3
+  MaximumAngleX: 90
+  MinimumAngleX: -90
