@@ -18,7 +18,7 @@ public class PlayerShootAction : MonoBehaviour
     private Transform cameraTransform;
 
     // Awake happens before OnEnable
-    void Awake()
+    private void Awake()
     {
         cameraTransform = Camera.main.transform;
         playerInput = GetComponent<PlayerInput>();

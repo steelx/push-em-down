@@ -13,16 +13,16 @@ public class BulletController : MonoBehaviour
     public Vector3 target { get; set; }
     public bool hit { get; set; }
 
-    private void Awake() { }
+    //private void Awake() { }
 
     private void OnEnable()
     {
         Destroy(gameObject, secondsToDestroy);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         // checks if target was Collided against nothing
         // in this case if it fired in air
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)

@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector2 input = moveAction.ReadValue<Vector2>();
-
         Vector3 move = buildFollowCameraMovement(input);
 
         controller.Move(move * Time.deltaTime * playerSpeed);
@@ -50,7 +49,9 @@ public class PlayerController : MonoBehaviour
         // rotation
         if (move != Vector3.zero)
         {
-            gameObject.transform.forward = move;
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            targetRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 360 * Time.deltaTime);
+            gameObject.transform.rotation = targetRotation;
         }
 
         // Changes the height position of the player..
